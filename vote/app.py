@@ -6,7 +6,7 @@ import random
 import json
 import logging
 
-option_a = os.getenv('OPTION_A', "docker")
+option_a = os.getenv('OPTION_A', "dockerswarm")
 option_b = os.getenv('OPTION_B', "k8s")
 hostname = socket.gethostname()
 
