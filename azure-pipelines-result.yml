@@ -21,7 +21,7 @@ variables:
   # Agent VM image name
 #  vmImageName: 'ubuntu-latest'
 pool:
- name: azurebuildagent
+ name: azurecicdagent
 
 stages:
 - stage: Build
@@ -30,7 +30,7 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      name: azurebuildagent
+      name: azurecicdagent
     steps:
     - task: Docker@2
       displayName: Build an image
@@ -44,7 +44,7 @@ stages:
   - job: Push
     displayName: Push
     pool:
-      name: azurebuildagent
+      name: azurecicdagent
     steps:
     - task: Docker@2
       displayName: Push an image
