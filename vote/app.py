@@ -6,8 +6,8 @@ import random
 import json
 import logging
 
-option_a = os.getenv('OPTION_A', "Winter")
-option_b = os.getenv('OPTION_B', "Summer")
+option_a = os.getenv('OPTION_A', "docker")
+option_b = os.getenv('OPTION_B', "k8s")
 hostname = socket.gethostname()
 
 app = Flask(__name__)
