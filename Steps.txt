@@ -1,0 +1,16 @@
+    Overall steps completed
+    CI Pipeline creation
+    azureagent for pipeline and its server configurations
+    yaml files for pipelines
+    Personal Access token for agent, argocd etc
+    Container registry creation
+    Permissions for pipeline etc
+    
+    AKS cluster creation
+    AKS login, configuration
+    ARGOCD install on AKS
+    ARGOCD configuration, application creation, repo connectivity etc
+    Update scripts for automatic update of deployment manifest upon new image build
+    Secret creation for ACR for argocd to pull images
+    AUtosync settings after every 10 seconds
+    
