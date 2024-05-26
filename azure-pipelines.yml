@@ -61,12 +61,8 @@ stages:
     displayName: update
     pool:
       name: azurecicdagent
-    steps:
+    steps:  
     - task: ShellScript@2
-      displayName: Build an image
       inputs:
-        containerRegistry: '$(dockerRegistryServiceConnection)'
-        repository: '$(imageRepository)'
-        command: 'build'
-        Dockerfile: 'vote/Dockerfile'
-        tags: '$(tag)'
+             scriptPath: 'scripts/updateK8smanifest.sh'
+             args: 'vote $imageRepository $tag'
