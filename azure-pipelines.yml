@@ -53,4 +53,20 @@ stages:
         repository: '$(imageRepository)'
         command: 'push'
         Dockerfile: 'vote/Dockerfile'
+        tags: '$(tag)'    
+- stage: Update
+  displayName: Update stage
+  jobs:
+  - job: update
+    displayName: update
+    pool:
+      name: azurecicdagent
+    steps:
+    - task: ShellScript@2
+      displayName: Build an image
+      inputs:
+        containerRegistry: '$(dockerRegistryServiceConnection)'
+        repository: '$(imageRepository)'
+        command: 'build'
+        Dockerfile: 'vote/Dockerfile'
         tags: '$(tag)'
