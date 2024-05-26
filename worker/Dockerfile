@@ -1,10 +1,10 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 as builder
 
-WORKDIR /Worker
-COPY src/Worker/Worker.csproj .
+WORKDIR /worker
+COPY worker/Worker.csproj .
 RUN dotnet restore
 
-COPY src/Worker/ .
+COPY worker/ .
 RUN dotnet publish -c Release -o /out Worker.csproj
 
 # app image
